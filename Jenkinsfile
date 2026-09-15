@@ -43,5 +43,11 @@ pipeline {
             }
         }
 
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t todo-app:1.0 .'
+            }
+        }
+
     }
-}
+
