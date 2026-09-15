@@ -21,6 +21,9 @@ pipeline {
 
                     echo "===== Maven ====="
                     mvn -version
+
+                    echo "===== Docker ====="
+                    docker --version
                 '''
             }
         }
@@ -50,4 +53,4 @@ pipeline {
         }
 
     }
-
+}
