@@ -52,5 +52,14 @@ pipeline {
             }
         }
 
+        stage('Docker Run') {
+            steps {
+                sh '''
+                    docker rm -f todo-app-container || true
+                    docker run -d --name todo-app-container -p 8081:8081 todo-app:1.0
+                '''
+            }
+        }
+
     }
 }
